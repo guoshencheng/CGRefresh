@@ -18,7 +18,7 @@ Stuff; \
 _Pragma("clang diagnostic pop") \
 } while (0)
 
-const CGFloat CGRefreshViewLength      = 50.0;
+const CGFloat CGRefreshViewLength      = 100.0;
 const CGFloat CGRefreshDuration        = 0.3;
 
 NSString *const CGRefreshContentOffset = @"contentOffset";
@@ -139,14 +139,14 @@ NSString *const CGRefreshContentSize   = @"contentSize";
 
 - (CGFloat)caculatePullDistance {
     if (self.collectionView.contentOffset.x > 0) {
-        return [UIScreen mainScreen].bounds.size.width + self.collectionView.contentOffset.x - self.collectionView.contentSize.width;
+        return self.collectionView.bounds.size.width + self.collectionView.contentOffset.x - self.collectionView.contentSize.width;
     } else {
         return - self.collectionView.contentOffset.x;
     }
 }
 
 - (BOOL)checkVaildPull {
-    return (self.collectionView.contentOffset.x <= 0 && self.position == CGRefreshPositionLeft) || ([UIScreen mainScreen].bounds.size.width + self.collectionView.contentOffset.x >= self.collectionView.contentSize.width && self.position == CGRefreshPositionRight);
+    return (self.collectionView.contentOffset.x <= 0 && self.position == CGRefreshPositionLeft) || (self.collectionView.bounds.size.width + self.collectionView.contentOffset.x >= self.collectionView.contentSize.width && self.position == CGRefreshPositionRight);
 }
 
 #pragma mark - observeValue
