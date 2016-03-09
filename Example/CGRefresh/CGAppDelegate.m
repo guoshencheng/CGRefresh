@@ -7,12 +7,14 @@
 //
 
 #import "CGAppDelegate.h"
+#import "ViewController.h"
 
 @implementation CGAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = [ViewController create];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

@@ -1,0 +1,30 @@
+>-
+  PODS:
+  - >-
+    CGRefresh (0.1.0)
+
+>-
+  DEPENDENCIES:
+  - >-
+    CGRefresh (from `../`)
+
+>-
+  EXTERNAL SOURCES:
+  >-
+    CGRefresh:
+    :path: >-
+      ../
+
+>-
+  SPEC CHECKSUMS:
+  >-
+    CGRefresh: >-
+    20a054e2fa334bb7c85d229ccf33a93dbd596ce4
+
+>-
+  PODFILE CHECKSUM: >-
+  e34af703387397758ff34766ef4cc078304d8496
+
+>-
+  COCOAPODS: >-
+  1.0.0.beta.4
