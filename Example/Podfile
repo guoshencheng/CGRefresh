@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'CGRefresh_Example', :exclusive => true do
+  pod 'CGRefresh', :path => '../'
+end
+
+target 'CGRefresh_Tests', :exclusive => true do
+  pod 'CGRefresh', :path => '../'
+
+  
+end
