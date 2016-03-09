@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "CGRefresh"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "left right refresh for collection view "
 
 # This description is used to generate tags and improve search results.
@@ -28,10 +28,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'CGRefresh' => ['Pod/Assets/*.png']
-  }
-
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
