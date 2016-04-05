@@ -190,9 +190,6 @@ NSString *const CGRefreshContentSize   = @"contentSize";
 - (void)handleRefreshPullingWithOldState:(CGRefreshState)oldState {
     if (CGRefreshStateNormal == oldState) {
         self.activityView.hidden = NO;
-        if (self.activityView && [self.activityView respondsToSelector:@selector(startAnimating)]) {
-            [self.activityView startAnimating];
-        }
     }
 }
 
@@ -206,6 +203,9 @@ NSString *const CGRefreshContentSize   = @"contentSize";
         inset.right = offset;
     }
     self.collectionView.contentInset = inset;
+    if (self.activityView && [self.activityView respondsToSelector:@selector(startAnimating)]) {
+        [self.activityView startAnimating];
+    }
     if (self.refreshingTaget &&  [self.refreshingTaget respondsToSelector:self.refreshingAction]) {
         SuppressPerformSelectorLeakWarning([self.refreshingTaget performSelector:self.refreshingAction]);
     }
