@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ActivityView.h"
 #import "UICollectionView+CGRefresh.h"
 
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
@@ -27,9 +28,9 @@
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    ActivityView *view = [[ActivityView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
     view.backgroundColor = [UIColor blueColor];
-    UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    ActivityView *view2 = [[ActivityView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
     view2.backgroundColor = [UIColor blueColor];
     [self.collectionView addRightRefreshWithTarget:self action:@selector(rightRefreshing)];
     self.collectionView.rightRefresh.activityView = view;

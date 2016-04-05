@@ -26,6 +26,10 @@ NSString *const CGRefreshContentSize   = @"contentSize";
 
 #define SELF_IS_ERECT ((self.position == CGRefreshPositionLeft) || (self.position == CGRefreshPositionRight))
 
+@interface UIView (CGRefreshView) <CGRefreshActivityViewProtocol>
+
+@end
+
 @interface CGRefreshView ()
 
 @property (nonatomic, assign) CGRefreshPosition position;
@@ -186,6 +190,9 @@ NSString *const CGRefreshContentSize   = @"contentSize";
 - (void)handleRefreshPullingWithOldState:(CGRefreshState)oldState {
     if (CGRefreshStateNormal == oldState) {
         self.activityView.hidden = NO;
+        if (self.activityView && [self.activityView respondsToSelector:@selector(startAnimating)]) {
+            [self.activityView startAnimating];
+        }
     }
 }
 
@@ -210,6 +217,9 @@ NSString *const CGRefreshContentSize   = @"contentSize";
         [UIView animateWithDuration:CGRefreshDuration animations:^{
             self.collectionView.contentInset = self.originInset;
         }];
+        if (self.activityView && [self.activityView respondsToSelector:@selector(stopAnimating)]) {
+            [self.activityView stopAnimating];
+        }
     }
 }
 

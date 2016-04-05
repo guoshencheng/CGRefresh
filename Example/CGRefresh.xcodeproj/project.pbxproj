@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EB9087D1CB3650A00F3A564 /* ActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9087C1CB3650A00F3A564 /* ActivityView.m */; };
 		2EDFAEBE1C8FFAEE00587E92 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDFAEBC1C8FFAEE00587E92 /* ViewController.m */; };
 		2EDFAEBF1C8FFAEE00587E92 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EDFAEBD1C8FFAEE00587E92 /* ViewController.xib */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -38,6 +39,8 @@
 /* Begin PBXFileReference section */
 		163B3C74A0D447BFB275004D /* Pods_CGRefresh_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGRefresh_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8B1D11AF1D187364EB7E12 /* Pods-CGRefresh_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGRefresh_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CGRefresh_Example/Pods-CGRefresh_Example.release.xcconfig"; sourceTree = "<group>"; };
+		2EB9087B1CB3650A00F3A564 /* ActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityView.h; sourceTree = "<group>"; };
+		2EB9087C1CB3650A00F3A564 /* ActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityView.m; sourceTree = "<group>"; };
 		2EDFAEBB1C8FFAEE00587E92 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2EDFAEBC1C8FFAEE00587E92 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2EDFAEBD1C8FFAEE00587E92 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 				6003F59D195388D20070C39A /* CGAppDelegate.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				2EB9087B1CB3650A00F3A564 /* ActivityView.h */,
+				2EB9087C1CB3650A00F3A564 /* ActivityView.m */,
 			);
 			name = "Example for CGRefresh";
 			path = CGRefresh;
@@ -391,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EDFAEBE1C8FFAEE00587E92 /* ViewController.m in Sources */,
+				2EB9087D1CB3650A00F3A564 /* ActivityView.m in Sources */,
 				6003F59E195388D20070C39A /* CGAppDelegate.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);

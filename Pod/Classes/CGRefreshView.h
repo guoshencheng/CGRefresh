@@ -20,6 +20,13 @@ typedef NS_ENUM(NSUInteger, CGRefreshPosition) {
 	CGRefreshPositionRight,
 };
 
+@protocol CGRefreshActivityViewProtocol <NSObject>
+
+- (void)startAnimating;
+- (void)stopAnimating;
+
+@end
+
 @interface CGRefreshView : UIView
 
 @property (nonatomic, strong) UIView  *activityView;
